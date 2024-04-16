@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="card" id="card-form">
+    <div class="card-container">
+      <div class="image">
+        <img class="image-mobile" src="assets/images/illustration-sign-up-mobile.svg" alt="">
+        <img class="image-desktop" src="assets/images/illustration-sign-up-desktop.svg" alt="">
+      </div>
+      <div class="date-form-container">
+        <div class="date-form">
+          <h2>Stay updated!</h2>
+          <p>Join 60.000+ producs managers receiving monthly updates on:</p>
+          <div class="success"><img src="assets/images/icon-success.svg" alt="">
+            <p>Product discovery and building what matters</p>
+          </div>
+          <div class="success"><img src="assets/images/icon-success.svg" alt="">
+            <p>Measuring to ensure updates are a success</p>
+          </div>
+          <div class="success"><img src="assets/images/icon-success.svg" alt="">
+            <p>And much more!</p>
+          </div>
+          <div class="form">
+            <label for="email">Email address</label>
+            <p class="message-invalid" id="message-invalid"></p>
+            <input class="email-valid" type="email" name="" id="" placeholder="email@company.com">
+            <button id="subscribe-button">Subscribe to monthly newsletter</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card hidden" id="card-success">
+    <div class="card-container-success">
+      <div class="message">
+        <div class="success"><img src="assets/images/icon-success.svg" alt=""></div>
+        <h2>Thanks for subscribing!</h2>
+        <p>A confirmation email has been sent to <strong><span id="email-success"></span></strong>. Please open it and click the button inside to confirm your subscription</p>
+      </div>
+      <div>
+        <button id="dismiss-button">Dismiss message</button>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">J.S.M. Dev.
+    </a>.
+  </div>
+  <script src="assets/js/script.js"></script>
+</body>
+
+</html>

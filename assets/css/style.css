@@ -1,0 +1,245 @@
+@import url(reset.css);
+@import url(fonts.css);
+@import url(variables.css);
+
+strong {
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 2.7rem;
+}
+
+.hidden {
+    display: none !important;
+}
+
+body {
+    background-color: var(--color-charcoal-grey);
+    font-family: "Roboto", sans-serif;
+    color: var(--color-charcoal-grey);
+    line-height: 1.5rem;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-container {
+    background-color: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    height: 100vh;
+}
+
+.card .card-container-success {
+    background-color: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 2rem;
+    height: 100vh;
+    padding: 1rem;
+}
+
+.card .card-container-success .message {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.card .card-container .image .image-mobile {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: bottom;
+}
+
+.card .card-container .date-form-container {
+    display: flex;
+    align-items: center;
+    align-self: center;
+}
+
+.card .card-container .date-form-container .date-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1.2rem;
+}
+
+.card .card-container .date-form .success {
+    display: flex;
+    gap: 1rem;
+}
+
+.card .card-container .date-form .success img {
+    width: 18px;
+}
+
+.card .card-container .date-form .form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card .card-container .date-form .form label {
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.card .card-container .date-form .form .message-invalid {
+    color: var(--color-error);
+    font-weight: 700;
+    font-size: 12px;
+}
+
+.card .card-container .date-form .form .email-invalid {
+    border-color: var(--color-error);
+    background-color: rgb(255, 231, 230);
+    color: var(--color-error);
+}
+
+.card .card-container .date-form .form input {
+    height: 1rem;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: .5rem;
+    padding: 1rem;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.card .card-container .date-form .form input::placeholder {
+    color: var(--color-grey);
+}
+
+.card .card-container .date-form .form .email-valid {
+    border-color: var(--color-grey);
+}
+
+.image-desktop {
+    display: none;
+}
+
+button {
+    position: relative;
+    padding: 1rem;
+    margin-block: 1rem;
+    border-radius: .5rem;
+    border-style: none;
+    background-color: var(--color-charcoal-grey);
+    font-weight: 700;
+    color: var(--color-white);
+    overflow: hidden;
+    z-index: 1;
+    width: 100%;
+    cursor: pointer;
+
+}
+
+button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(240, 57, 97, 1) 0%, rgba(255, 55, 0, 1) 100%);
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    z-index: -1;
+    box-shadow: 21px 25px 57px rgba(0, 0, 0, 0.52);
+
+}
+
+button:hover::before {
+    opacity: 1;
+    box-shadow: 21px 25px 57px rgba(0, 0, 0, 0.52);
+}
+
+.attribution {
+    background-color: white;
+    color: var(--color-charcoal-grey);
+}
+
+.attribution a {
+    color: var(--color-charcoal-grey) !important;
+    font-weight: 700;
+}
+
+@media screen and (min-width: 620px) {
+
+    h2 {
+        font-size: 48px;
+
+    }
+
+    .card {
+        height: 100vh;
+    }
+
+    .card .card-container-success {
+        background-color: var(--color-white);
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        padding: 2.5rem;
+        width: 300px;
+        border-radius: 2rem;
+    }
+
+    .card .card-container-success .message {
+        display: flex;
+        flex-direction: column;
+        justify-content: start !important;
+        gap: 2rem;
+    }
+
+    .card .card-container {
+        flex-direction: row-reverse;
+        border-radius: 3rem;
+        padding: 1.5rem;
+        gap: 2rem;
+        height: auto;
+    }
+
+    .card .card-container .image {
+        width: 400px;
+    }
+
+    .card .card-container .image .image-mobile {
+        display: none;
+    }
+
+    .card .card-container .image .image-desktop {
+        display: block;
+    }
+
+    .card .card-container .date-form-container {
+        display: flex;
+        align-items: center;
+        height: auto !important;
+    }
+
+    .card .card-container .date-form-container .date-form {
+        width: 400px;
+
+    }
+
+    .attribution {
+        background-color: transparent;
+        color: var(--color-white);
+    }
+    
+    .attribution a {
+        color: var(--color-white) !important;
+        font-weight: 700;
+    }
+
+}
